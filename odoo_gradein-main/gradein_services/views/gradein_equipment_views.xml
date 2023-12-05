@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="view_gradein_equipment_form" model="ir.ui.view">
+        <field name="name">Grade In Equipment</field>
+        <field name="model">gradein.equipment</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="image"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                    <field name="price"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+</odoo>
