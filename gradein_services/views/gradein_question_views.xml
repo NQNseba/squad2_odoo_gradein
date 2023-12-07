@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- FORM -->
+        <record id="view_gradein_question_form" model="ir.ui.view">
+            <field name="name">Grade In Question</field>
+            <field name="model">gradein.question</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="equipment_type_ids" widget="many2many_tags"/> 
+                        <!-- <field name="answer_ids" widget="many2many_tags"/> -->                   
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- TREE -->
+        <record id="view_gradein_question_tree" model="ir.ui.view">
+            <field name="name">Grade In Question</field>
+            <field name="model">gradein.question</field>
+            <field name="arch" type="xml">
+                <tree string="Questions">
+                    <!-- Definimos las columnas que seran visibles -->
+                    <field name="name"/>
+                    <field name="active"/>
+                    <field name="equipment_type_ids" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>   
+
+        <!-- ACTION -->
+        <record id="action_gradein_question" model="ir.actions.act_window">
+            <field name="name">Grade In Question Action</field>
+            <field name="res_model">gradein.question</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_gradein_question_tree"/>
+        </record>
+
+    </data>    
+</odoo>

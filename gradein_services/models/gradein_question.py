@@ -2,7 +2,7 @@ from odoo import fields, models, api
 
 class GradeInQuestion(models.Model):
     _name = 'gradein.question'
-    _descrition = 'Grade In Question' # con este tag lo identificamos con el views
+    _description = 'Grade In Question' # con este tag lo identificamos con el views
 
     name = fields.Char(string="Nombre")
     active = fields.Boolean(default=True, string="Activa")

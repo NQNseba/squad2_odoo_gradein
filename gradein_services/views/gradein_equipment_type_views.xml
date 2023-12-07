@@ -13,5 +13,13 @@
                 </group>
             </form>
         </field>
+    
+
+       <!-- <menuitem
+        id="gradein_conf_menu"
+        name="GradeIn Configuration"
+        parent="gradein_root"/> --> 
+
+
     </record>
 </odoo>

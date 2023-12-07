@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_gradein_equipment_form" model="ir.ui.view">
+            <field name="name">Grade In Equipment Form</field>
+            <field name="model">gradein.equipment</field>
+            <field name="arch" type="xml">
+                <form string="Equipment">
+                    <group>
+                        <field name="name"/>
+                        <field name="image"/>
+                        <field name="description"/>
+                        <field name="active"/>
+                        <field name="price"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE -->
+        <record id="view_gradein_equipment_tree" model="ir.ui.view">
+            <field name="name">Grade In Equipment Tree</field>
+            <field name="model">gradein.equipment</field>
+            <field name="arch" type="xml">
+                <tree string="Equipment">
+                    <!-- Definimos las columnas que serán visibles -->
+                    <field name="name"/>
+                    <field name="image"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record> 
+
+        <!-- ACTION -->
+        <record id="action_gradein_equipment" model="ir.actions.act_window">
+            <field name="name">Grade In Equipment Action</field>
+            <field name="res_model">gradein.equipment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_gradein_equipment_tree"/>
+        </record>
+
+        <!-- MENU -->
+        <record id="menu_gradein_config" model="ir.ui.menu">
+            <field name="name">Grade In Equipment</field>
+            <field name="sequence" eval="10"/>
+        </record>
+
+        <record id="menu_gradein_question" model="ir.ui.menu">
+            <field name="name">Questions</field>
+            <field name="parent_id" ref="menu_gradein_config"/>
+            <field name="action" ref="action_gradein_equipment"/>
+        </record>
+
+        <menuitem
+            id="GradeInQuestionAction"
+            name="Grade In Question"
+            action="action_gradein_question"
+            parent="menu_gradein_question"/>
+    
+    </data>
+</odoo>
