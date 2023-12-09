@@ -10,6 +10,7 @@
         'security/ir.model.access.csv',
         'views/gradein_equipment_views.xml',
         'views/gradein_question_views.xml',
+        'views/menu_gradein.xml',
     ],
     'images': [
         'static/description/icon.png',

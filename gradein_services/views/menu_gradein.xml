@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <!-- MENU -->
+        <record id="menu_gradein_config" model="ir.ui.menu">
+            <field name="name">Grade In Services</field>
+            <field name="sequence" eval="10"/>
+        </record>
+
+        <record id="menu_gradein_question" model="ir.ui.menu">
+            <field name="name">Configuration</field>
+            <field name="parent_id" ref="menu_gradein_config"/>
+            <field name="action" ref="action_gradein_equipment"/>
+        </record>
+
+        <menuitem
+            id="GradeInQuestionAction"
+            name="Grade In Question"
+            action="action_gradein_question"
+            parent="menu_gradein_question"/>
+
+        <menuitem
+            id="GradeInEquipmentAction"
+            name="Grade In Equipment"
+            action="action_gradein_equipment"
+            parent="menu_gradein_question"/>
+    </data>
+    
+
+</odoo>
