@@ -105,6 +105,53 @@ El modelo principal en este módulo es GradeInEquipment, que contiene los siguie
 
 
 
+Proyecto squad2_odoo_gradein
+#Desarrollo del Modelo de Orden de GradeIn
+Este proyecto utiliza Odoo para gestionar órdenes de GradeIn. A continuación, se presenta una documentación detallada de las funcionalidades del modelo.
+
+#Funcionalidades del Modelo
+Crear una Orden de GradeIn:
+Para crear una nueva orden de GradeIn, sigue estos pasos:
+
+#Accede a la interfaz de Odoo.
+Navega a la sección de "Órdenes de GradeIn".
+Selecciona la opción para crear una nueva orden.
+Completa los campos obligatorios, como el nombre del cliente y la fecha de la orden.
+Guarda la orden creada.
+Editar una Orden de GradeIn:
+Si necesitas realizar modificaciones en una orden existente, realiza lo siguiente:
+
+#Accede a la interfaz de Odoo.
+Dirígete a la sección de "Órdenes de GradeIn".
+Selecciona la orden que deseas editar.
+Realiza las modificaciones necesarias en los campos correspondientes.
+Guarda los cambios realizados.
+Eliminar una Orden de GradeIn:
+Para eliminar una orden registrada, sigue estos pasos:
+
+#Accede a la interfaz de Odoo.
+Ve a la sección de "Órdenes de GradeIn".
+Selecciona la orden que deseas eliminar.
+Busca la opción para eliminar la orden.
+Confirma la eliminación.
+Consultar Órdenes de GradeIn:
+Para buscar y filtrar órdenes en la interfaz de Odoo, sigue estos pasos:
+
+#Accede a la interfaz de Odoo.
+Navega a la sección de "Órdenes de GradeIn".
+Utiliza las opciones de búsqueda y filtros disponibles para encontrar las órdenes deseadas.
+Revisa los resultados y ajusta los filtros según sea necesario.
+Documentación de las Vistas y Modelos
+Dentro del código fuente, encontrarás comentarios detallados que explican cada vista y modelo. A continuación, se muestra un ejemplo de cómo se documenta una vista y un modelo.
+
+
+
+
+
+
+
+
+
 ## Contribuciones
 Si encuentras problemas o tienes mejoras, ¡no dudes en abrir un problema o enviar una solicitud de extracción!
 ## Licencia
