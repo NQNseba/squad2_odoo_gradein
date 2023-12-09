@@ -40,24 +40,6 @@
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_gradein_equipment_tree"/>
         </record>
-
-        <!-- MENU -->
-        <record id="menu_gradein_config" model="ir.ui.menu">
-            <field name="name">Grade In Equipment</field>
-            <field name="sequence" eval="10"/>
-        </record>
-
-        <record id="menu_gradein_question" model="ir.ui.menu">
-            <field name="name">Questions</field>
-            <field name="parent_id" ref="menu_gradein_config"/>
-            <field name="action" ref="action_gradein_equipment"/>
-        </record>
-
-        <menuitem
-            id="GradeInQuestionAction"
-            name="Grade In Question"
-            action="action_gradein_question"
-            parent="menu_gradein_question"/>
     
     </data>
 </odoo>
