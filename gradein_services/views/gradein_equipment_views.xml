@@ -57,7 +57,6 @@
                     <group expand="1" string="Descripcion">
                         <filter string="Descripcion" name="description" context="{'group_by': 'description'}"/>
                     </group>
-
                 </search>
             </field>
         </record>
