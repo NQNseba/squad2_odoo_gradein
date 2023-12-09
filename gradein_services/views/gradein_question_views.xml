@@ -11,7 +11,7 @@
                         <field name="name"/>
                         <field name="active"/>
                         <field name="equipment_type_ids" widget="many2many_tags"/> 
-                        <!-- <field name="answer_ids" widget="many2many_tags"/> -->                   
+                        <!--<field name="answer_ids" widget="many2many_tags"/>-->                 
                     </group>
                 </form>
             </field>
@@ -27,10 +27,27 @@
                     <!-- Definimos las columnas que seran visibles -->
                     <field name="name"/>
                     <field name="active"/>
-                    <field name="equipment_type_ids" widget="many2many_tags"/>
                 </tree>
             </field>
         </record>   
+
+        <!-- SEARCH -->
+        <record id="view_gradein_question_search" model="ir.ui.view">
+            <field name="name">Grade In Question Search</field>
+            <field name="model">gradein.question</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Nombre" filter_domain="[('name', 'ilike', self)]"/>
+                    <group expand="1" string="Agrupados por Nombre">
+                        <filter string="Nombre" name="name" context="{'group_by': 'name'}"/>
+                    </group>
+                    <filter string="Archivados" name="active" domain="[('active', '=', True)]"/>
+                    <group expand="1" string="Archivados">
+                        <filter string="Archivados" name="active" context="{'group_by': 'active'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
 
         <!-- ACTION -->
         <record id="action_gradein_question" model="ir.actions.act_window">
