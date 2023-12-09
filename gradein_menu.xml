@@ -1,0 +1,29 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="menu_config" model="ir.ui.menu">
+            <field name="name">Configuración</field>
+            <field name="sequence" eval="10"/>
+        </record>
+
+        
+        <menuitem id="menu_equipment_types" name="Tipos de equipos" parent="menu_config"/>
+        
+        
+        <record id="menu_equipment_types_group" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6, 0, [ref('base.group_erp_manager')])]"/>
+        </record>
+
+        
+        <record id="menu_equipment_types_action" model="ir.actions.act_window">
+            <field name="name">Tipos de equipos</field>
+            <field name="res_model">gradein.equipment.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        
+        <menuitem id="menu_equipment_types_item" name="Tipos de equipos" parent="menu_equipment_types" action="menu_equipment_types_action"/>
+    </data>
+</odoo>
