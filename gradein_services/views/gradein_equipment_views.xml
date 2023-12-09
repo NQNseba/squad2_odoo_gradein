@@ -25,9 +25,7 @@
                 <tree string="Equipment">
                     <!-- Definimos las columnas que serán visibles -->
                     <field name="name"/>
-                    <field name="image"/>
                     <field name="description"/>
-                    <field name="active"/>
                     <field name="price"/>
                 </tree>
             </field>
@@ -39,6 +37,29 @@
             <field name="res_model">gradein.equipment</field>
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_gradein_equipment_tree"/>
+        </record>
+
+        <!-- SEARCH -->
+        <record id="view_gradein_equipment_search" model="ir.ui.view">
+            <field name="name">Grade In Equipment Search</field>
+            <field name="model">gradein.equipment</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Nombre" filter_domain="[('name', 'ilike', self)]"/>
+                    <group expand="1" string="Agrupados por Nombre">
+                        <filter string="Nombre" name="name" context="{'group_by': 'name'}"/>
+                    </group>
+                    <filter string="Archivados" name="active" domain="[('active', '=', True)]"/>
+                    <group expand="1" string="Archivados">
+                        <filter string="Archivados" name="active" context="{'group_by': 'active'}"/>
+                    </group>
+                    <filter string="Descripcion" name="description" domain="[('description', 'ilike', self)]"/>
+                    <group expand="1" string="Descripcion">
+                        <filter string="Descripcion" name="description" context="{'group_by': 'description'}"/>
+                    </group>
+
+                </search>
+            </field>
         </record>
     
     </data>
