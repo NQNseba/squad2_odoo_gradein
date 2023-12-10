@@ -1,6 +1,6 @@
 from odoo import fields, models, api
 
-class GradeInQuestion(models.Model):
+class GradeInEquipment(models.Model):
     _name = 'gradein.equipment'
     _description = 'Grade In Equipment' # con este tag lo identificamos con el views
 

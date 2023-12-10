@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <!-- FORM -->
+        <record id="view_gradein_order_form" model="ir.ui.view">
+            <field name="name">Grade In Order Form</field>
+            <field name="model">gradein.order</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="date"/>
+                        <field name="state"/>
+                        <field name="equipment_id"/>
+                        <field name="imei"/>
+                        <field name="image_ids"/>
+                        <field name="partner_id"/>
+                        <!--<field name="reject_motive_id"/> -->       
+                        <field name="price"/>  
+                        <field name="review"/>  
+                        <field name="answer_ids"/>
+                        <field name="question_id"/> 
+                        <field name="answer_id"/> 
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE -->
+        <record id="view_gradein_order_tree" model="ir.ui.view">
+            <field name="name">Grade In Order Tree</field>
+            <field name="model">gradein.order</field>
+            <field name="arch" type="xml">
+                <tree string="Orders">
+                    <!-- Definimos las columnas que seran visibles -->
+                        <field name="name"/>
+                        <field name="date"/>
+                        <field name="state"/>
+                        <field name="equipment_id"/>
+                        <field name="imei"/>
+                        <field name="partner_id"/>
+                        <!-- <field name="reject_motive_id"/> -->
+                        <field name="price"/> 
+                </tree>
+            </field>
+        </record>
+        
+        <!-- SEARCH -->
+        <record id="view_gradein_order_search" model="ir.ui.view">
+            <field name="name">Grade In Order Search</field>
+            <field name="model">gradein.order</field>
+            <field name="arch" type="xml">
+                <search>
+                    <!-- Filtros Rapidos de Busqueda -->
+                    <group expand="0" string="Filtros Rapidos">
+                        <filter name="name" string="Nombre" domain="[('name', 'ilike', self)]"/>
+                        <filter name="date" string="Fecha" domain="[('date', '>=', self)]"/>
+                        <filter name="imei" string="IMEI" domain="[('imei', 'ilike', self)]"/>
+                        <filter name="equipment_id" string="Equipo" domain="[('equipment_id.name', 'ilike', self)]"/>
+                        <!--<filter name="reject_motive_id" string="Motivo de rechazo" domain="[('reject_motive_id.name', 'ilike', self)]"/>-->
+                    </group>
+
+                    <!-- Filtros Predefinidos -->
+                    <group expand="0" string="Filtros predefinidos">
+                        <filter name="draft" string="Borrador" domain="[('state', '=', 'draft')]"/>
+                        <filter name="confirmed" string="Confirmado" domain="[('state', '=', 'confirmed')]"/>
+                        <filter name="rejected" string="Rechazado" domain="[('state', '=', 'rejected')]"/>
+                    </group>
+
+                    <!-- Agrupar por -->
+                    <group expand="0" string="Agrupar por">
+                        <filter name="equipment_id" string="Equipo" context="{'group_by': 'equipment_id'}"/>
+                        <!--<filter name="reject_motive_id" string="Motivo de rechazo" context="{'group_by': 'reject_motive_id'}"/>-->
+                    </group>
+
+                </search>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_gradein_order" model="ir.actions.act_window">
+            <field name="name">Grade In Order Action</field>
+            <field name="res_model">gradein.order</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="view_id" ref="view_gradein_order_tree"/>
+        </record>
+    
+    </data>
+    
+
+</odoo>

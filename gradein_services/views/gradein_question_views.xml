@@ -11,7 +11,7 @@
                         <field name="name"/>
                         <field name="active"/>
                         <field name="equipment_type_ids" widget="many2many_tags"/> 
-                        <!--<field name="answer_ids" widget="many2many_tags"/>-->                 
+                        <field name="answer_ids" widget="many2many_tags"/>              
                     </group>
                 </form>
             </field>
