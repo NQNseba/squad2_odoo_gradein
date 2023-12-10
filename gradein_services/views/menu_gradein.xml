@@ -12,7 +12,7 @@
         <record id="menu_gradein_question" model="ir.ui.menu">
             <field name="name">Configuration</field>
             <field name="parent_id" ref="menu_gradein_config"/>
-            <field name="action" ref="action_gradein_equipment"/>
+            <field name="action" ref="action_gradein_order"/>
         </record>
 
         <menuitem
@@ -31,6 +31,12 @@
             id="GradeInAnswerAction"
             name="Grade In Answer"
             action="action_gradein_answer"
+            parent="menu_gradein_question"/>
+
+        <menuitem
+            id="GradeInOrderAction"
+            name="Grade In Order"
+            action="action_gradein_order"
             parent="menu_gradein_question"/>
 
     </data>

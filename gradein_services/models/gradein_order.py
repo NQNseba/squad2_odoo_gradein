@@ -10,13 +10,13 @@ class GradeInOrder(models.Model):
         ('draft','borrador'),
         ('confirmed','confirmado'),
         ('rejected','rechazado'),], string='Estado', default='draft')
-    equipment = fields.Many2one('gradein_equipment', string='Equipo')
+    equipment_id = fields.Many2one('gradein.equipment', string='Equipo')
     imei = fields.Integer(string='IMEI')
-    image = fields.Many2many('ir.attachment', string='Imagen')
+    image_ids = fields.Many2many('ir.attachment',domain="[('res_model', '=', 'gradein.equipment')]", string='Imagen')
     partner_id = fields.Many2one('res.partner', string='Cliente')
     ##reject_motive_id = fields.Many2one('gradein.reject.motive', string='Motivo de rechazo')
     price = fields.Float(string='Importe a pagar')
     review = fields.Text(string='Resumen de la evaluación')
-    answer_ids = fields.One2many('gradein.answer', string='Respuestas')
+    answer_ids = fields.One2many('gradein.answer', 'relacion_id', string='Respuestas')
     question_id = fields.Many2one('gradein.question', string='Pregunta')
-    answer_ids = fields.Many2one('gradein.answer', string='Respuesta dada')
+    answer_id = fields.Many2one('gradein.answer', string='Respuesta dada')
