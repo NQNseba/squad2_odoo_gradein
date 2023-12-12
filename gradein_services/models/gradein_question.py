@@ -6,5 +6,5 @@ class GradeInQuestion(models.Model):
 
     name = fields.Char(string="Name")
     active = fields.Boolean(default=True, string="Active")
-    equipment_type_ids = fields.Many2one('gradein.equipment.type', string="Equipment Type")
+    equipment_type_ids = fields.Many2many('gradein.equipment.type', string="Equipment Type")
     answer_ids = fields.Many2many('gradein.answer', string='Answer Given')

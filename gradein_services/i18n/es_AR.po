@@ -65,12 +65,12 @@ msgstr "Cliente"
 
 #. module: gradein_services
 #: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
-msgid "Cliente"
+msgid "Client"
 msgstr "Cliente"
 
 #. module: gradein_services
 #: model:ir.ui.menu,name:gradein_services.menu_gradein_question
-msgid "Configuracion"
+msgid "Configuration"
 msgstr "Configuracion"
 
 #. module: gradein_services
@@ -159,90 +159,90 @@ msgstr "Fecha"
 #: model:ir.model,name:gradein_services.model_gradein_answer
 #: model:ir.ui.menu,name:gradein_services.GradeInAnswerAction
 msgid "Grade In Answer"
-msgstr "Calificacion de Respuesta"
+msgstr "Grade In Respuesta"
 
 #. module: gradein_services
 #: model:ir.actions.act_window,name:gradein_services.action_gradein_answer
 msgid "Grade In Answer Action"
-msgstr "Accion Calificacion de Respuesta"
+msgstr "Accion Grade In Respuesta"
 
 #. module: gradein_services
 #: model:ir.model,name:gradein_services.model_gradein_equipment
 #: model:ir.ui.menu,name:gradein_services.GradeInEquipmentAction
 msgid "Grade In Equipment"
-msgstr "Calificacion de Equipo"
+msgstr "Grade In Equipo"
 
 #. module: gradein_services
 #: model:ir.actions.act_window,name:gradein_services.action_gradein_equipment
 msgid "Grade In Equipment Action"
-msgstr "Accion Calificacion de Equipo"
+msgstr "Accion Grade In Equipo"
 
 #. module: gradein_services
 #: model:ir.model,name:gradein_services.model_gradein_equipment_type
 #: model:ir.ui.menu,name:gradein_services.GradeInEquipmentTypeAction
 msgid "Grade In Equipment Type"
-msgstr "Calificacion de Tipo de Equipo"
+msgstr "Grade In Tipo de Equipo"
 
 #. module: gradein_services
 #: model:ir.actions.act_window,name:gradein_services.action_gradein_equipment_type
 msgid "Grade In Equipment Type Action"
-msgstr "Accion Calificacion de Tipo de Equipo"
+msgstr "Accion Grade In Tipo de Equipo"
 
 #. module: gradein_services
 #: model:ir.ui.menu,name:gradein_services.GradeInOrderAction
 msgid "Grade In Order"
-msgstr "Calificacion de Orden"
+msgstr "Grade In Orden"
 
 #. module: gradein_services
 #: model:ir.actions.act_window,name:gradein_services.action_gradein_order
 msgid "Grade In Order Action"
-msgstr "Accion Calificacion de Orden"
+msgstr "Accion Grade In Orden"
 
 #. module: gradein_services
 #: model:ir.model,name:gradein_services.model_report_gradein_services_gradein_order_report
 #: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
 msgid "Grade In Order Report"
-msgstr "Reporte de Calificacion de Orden"
+msgstr "Reporte Grade In Orden"
 
 #. module: gradein_services
 #: model:ir.model,name:gradein_services.model_gradein_question
 #: model:ir.ui.menu,name:gradein_services.GradeInQuestionAction
 msgid "Grade In Question"
-msgstr "Calificacion de Pregunta"
+msgstr "Grade In Pregunta"
 
 #. module: gradein_services
 #: model:ir.actions.act_window,name:gradein_services.action_gradein_question
 msgid "Grade In Question Action"
-msgstr "Accion de Calificacion de Pregunta" 
+msgstr "Accion Grade In Pregunta" 
 
 #. module: gradein_services
 #: model:ir.model,name:gradein_services.model_gradein_reject_motive
 #: model:ir.ui.menu,name:gradein_services.GradeInRejectMotive
 msgid "Grade In Reject Motive"
-msgstr "Calificacion de Motivo de Rechazo"
+msgstr "Grade In Motivo de Rechazo"
 
 #. module: gradein_services
 #: model:ir.actions.act_window,name:gradein_services.action_gradein_reject_motive
 msgid "Grade In Reject Motive Seach"
-msgstr "Busqueda en Calificacion de Motivo de Rechazo"
+msgstr "Busqueda Grade In Motivo de Rechazo"
 
 #. module: gradein_services
 #: model:ir.ui.menu,name:gradein_services.menu_gradein_config
 msgid "Grade In Services"
-msgstr "Calificacion de Servicios"
+msgstr "Grade In Servicios"
 
 #. module: gradein_services
 #: model:ir.actions.report,name:gradein_services.action_gradein_order_report
 #: model:ir.model,name:gradein_services.model_gradein_order
 #: model:ir.model.fields,field_description:gradein_services.field_gradein_order_image__grade_order_id
 msgid "Grade in Order"
-msgstr "Calificacion de Orden"
+msgstr "Grade In Orden"
 
 #. module: gradein_services
 #: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_equipment_form
 #: model_terms:ir.ui.view,arch_db:gradein_services.view_gradein_equipment_tree
 msgid "Grade in Order Image"
-msgstr "Imagen de Orden"
+msgstr "Imagen Grade In Orden"
 
 #. module: gradein_services
 #: model:ir.model.fields,field_description:gradein_services.field_gradein_answer__id
@@ -290,7 +290,7 @@ msgstr "Imagen 512"
 
 #. module: gradein_services
 #: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
-msgid "Imagenes"
+msgid "Images"
 msgstr "Imagenes"
 
 #. module: gradein_services
@@ -359,7 +359,7 @@ msgstr "Nombre"
 
 #. module: gradein_services
 #: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
-msgid "Nombre"
+msgid "Name"
 msgstr "Nombre"
 
 #. module: gradein_services
@@ -408,7 +408,7 @@ msgstr "Rechazo"
 
 #. module: gradein_services
 #: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
-msgid "Resumen de la evaluación"
+msgid "Evaluation Summary"
 msgstr "Resumen de la Evaluacion"
 
 #. module: gradein_services
