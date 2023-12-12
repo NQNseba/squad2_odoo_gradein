@@ -4,19 +4,19 @@ class GradeInOrder(models.Model):
     _name = "gradein.order"
     _description = "Grade in Order"
 
-    name = fields.Char(string="Nombre")
-    date = fields.Date(string="Fecha")
+    name = fields.Char(string="Name")
+    date = fields.Date(string="Date")
     state = fields.Selection([
-        ('draft','borrador'),
-        ('confirmed','confirmado'),
-        ('rejected','rechazado'),], string='Estado', default='draft')
-    equipment_id = fields.Many2one('gradein.equipment', string='Equipo')
+        ('draft','draft'),
+        ('confirmed','confirmed'),
+        ('rejected','rejected'),], string='State', default='draft')
+    equipment_id = fields.Many2one('gradein.equipment', string='Equipment')
     imei = fields.Integer(string='IMEI')
-    image_ids = fields.One2many('gradein.order.image', 'grade_order_id', string='Imagenes')
-    partner_id = fields.Many2one('res.partner', string='Cliente')
-    reject_motive_id = fields.Many2one('gradein.reject.motive', string='Motivo de rechazo')
-    price = fields.Float(string='Importe a pagar')
-    review = fields.Text(string='Resumen de la evaluación')
-    question_id = fields.Many2one('gradein.question', string='Pregunta')
-    answer_ids = fields.Many2one('gradein.answer', string='Respuesta dada')
+    image_ids = fields.One2many('gradein.order.image', 'grade_order_id', string='Images')
+    partner_id = fields.Many2one('res.partner', string='Client')
+    reject_motive_id = fields.Many2one('gradein.reject.motive', string='Reject Motive')
+    price = fields.Float(string='Amount to pay')
+    review = fields.Text(string='Evaluation Summary')
+    question_id = fields.Many2one('gradein.question', string='Question')
+    answer_ids = fields.Many2one('gradein.answer', string='Answers')
 

@@ -1,5 +1,5 @@
 {
-    "name": "Servicios",
+    "name": "Grade In Services",
     "version": "1.0",
     "author": "Alkemy_Squad2",
     "depends": ["base"],
