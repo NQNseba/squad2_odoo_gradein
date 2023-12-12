@@ -37,14 +37,10 @@
             <field name="model">gradein.question</field>
             <field name="arch" type="xml">
                 <search>
-                    <field name="name" string="Nombre" filter_domain="[('name', 'ilike', self)]"/>
-                    <group expand="1" string="Agrupados por Nombre">
-                        <filter string="Nombre" name="name" context="{'group_by': 'name'}"/>
-                    </group>
-                    <filter string="Archivados" name="active" domain="[('active', '=', True)]"/>
-                    <group expand="1" string="Archivados">
-                        <filter string="Archivados" name="active" context="{'group_by': 'active'}"/>
-                    </group>
+                    <field name="name" string="Nombre"/>
+                    <filter name="name" string="Nombre" context="{'group_by': 'name'}"/>
+                    <field name="active" string="Archivados"/>
+                    <filter name="active" string="Archivados" domain="[('active', '=', True)]" context="{'group_by': 'active'}"/>
                 </search>
             </field>
         </record>

@@ -14,14 +14,18 @@
                         <field name="state"/>
                         <field name="equipment_id"/>
                         <field name="imei"/>
-                        <field name="image_ids"/>
+                        <field name="image_ids"
+                        class="o_website_sale_image_list"
+                        context="{'default_name' : name}"
+                        mode="kanban"
+                        add-label="Agregar una imagen"
+                        no-label="1"/>
                         <field name="partner_id"/>
                         <!--<field name="reject_motive_id"/> -->       
                         <field name="price"/>  
                         <field name="review"/>  
                         <field name="answer_ids"/>
                         <field name="question_id"/> 
-                        <field name="answer_id"/> 
                     </group>
                 </form>
             </field>
@@ -53,25 +57,21 @@
             <field name="arch" type="xml">
                 <search>
                     <!-- Filtros Rapidos de Busqueda -->
-                    <group expand="0" string="Filtros Rapidos">
-                        <filter name="name" string="Nombre" domain="[('name', 'ilike', self)]"/>
-                        <filter name="date" string="Fecha" domain="[('date', '>=', self)]"/>
-                        <filter name="imei" string="IMEI" domain="[('imei', 'ilike', self)]"/>
-                        <filter name="equipment_id" string="Equipo" domain="[('equipment_id.name', 'ilike', self)]"/>
+                        <field name="name" string="Nombre"/>
+                        <filter name="name" string="Nombre" context="{'group_by': 'name'}"/>
+                        <field name="date" string="Fecha"/>
+                        <filter name="date" string="Fecha" context="{'group_by': 'date'}"/>
+                        <field name="imei" string="IMEI"/>
+                        <filter name="imei" string="IMEI" context="{'group_by': 'imei'}"/>
+                        <field name="equipment_id" string="Equipo"/>
+                        <filter name="equipment_id" string="Equipo" context="{'group_by': 'equipment_id'}"/>
                         <!--<filter name="reject_motive_id" string="Motivo de rechazo" domain="[('reject_motive_id.name', 'ilike', self)]"/>-->
-                    </group>
 
-                    <!-- Filtros Predefinidos -->
-                    <group expand="0" string="Filtros predefinidos">
+                    <!-- Grupos de estado -->
+                    <group expand="0" string="Agrupar por Estado">
                         <filter name="draft" string="Borrador" domain="[('state', '=', 'draft')]"/>
                         <filter name="confirmed" string="Confirmado" domain="[('state', '=', 'confirmed')]"/>
                         <filter name="rejected" string="Rechazado" domain="[('state', '=', 'rejected')]"/>
-                    </group>
-
-                    <!-- Agrupar por -->
-                    <group expand="0" string="Agrupar por">
-                        <filter name="equipment_id" string="Equipo" context="{'group_by': 'equipment_id'}"/>
-                        <!--<filter name="reject_motive_id" string="Motivo de rechazo" context="{'group_by': 'reject_motive_id'}"/>-->
                     </group>
 
                 </search>
