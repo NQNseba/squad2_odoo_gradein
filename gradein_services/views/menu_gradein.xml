@@ -28,6 +28,12 @@
             parent="menu_gradein_question"/>
 
         <menuitem
+            id="GradeInEquipmentTypeAction"
+            name="Grade In Equipment Type"
+            action="action_gradein_equipment_type"
+            parent="menu_gradein_question"/>
+
+        <menuitem
             id="GradeInAnswerAction"
             name="Grade In Answer"
             action="action_gradein_answer"
