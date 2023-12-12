@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_gradein_reject_motive_form" model="ir.ui.view">
+            <field name="name">Grade In Reject Motive Form</field>
+            <field name="model">gradein.reject.motive</field>
+            <field name="arch" type="xml">
+                <form string="Reject Motive">
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE -->
+        <record id="view_gradein_reject_motive_tree" model="ir.ui.view">
+            <field name="name">Grade In Reject Motive Tree</field>
+            <field name="model">gradein.reject.motive</field>
+            <field name="arch" type="xml">
+                <tree string="Reject Motive">
+                    <!-- Definimos las columnas que serán visibles -->
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record> 
+
+        <!-- ACTION -->
+        <record id="action_gradein_reject_motive" model="ir.actions.act_window">
+            <field name="name">Grade In Reject Motive Seach</field>
+            <field name="res_model">gradein.reject.motive</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_gradein_reject_motive_tree"/>
+        </record>
+
+        <!-- SEARCH -->
+        <record id="view_gradein_reject_motive_search" model="ir.ui.view">
+            <field name="name">Grade In Equipment Search</field>
+            <field name="model">gradein.reject.motive</field>
+            <field name="arch" type="xml">
+                <search>
+                        <field name="name" string="Nombre"/>
+                        <filter name="name" string="Nombre" context="{'group_by': 'name'}" />
+                        <field name="active" string="Archivados"/>
+                        <filter name="active" string="Archivados" domain="[('active', '=', True)]" context="{'group_by': 'active'}"/>   
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

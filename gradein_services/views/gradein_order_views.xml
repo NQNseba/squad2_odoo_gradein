@@ -14,18 +14,22 @@
                         <field name="state"/>
                         <field name="equipment_id"/>
                         <field name="imei"/>
+                    </group>
+                    <group>
+                        <field name="partner_id"/>
+                        <field name="reject_motive_id"/>   
+                        <field name="price"/>  
+                        <field name="review"/>  
+                        <field name="answer_ids"/>
+                        <field name="question_id"/>                         
+                    </group>
+                    <group>
                         <field name="image_ids"
                         class="o_website_sale_image_list"
                         context="{'default_name' : name}"
                         mode="kanban"
                         add-label="Agregar una imagen"
                         no-label="1"/>
-                        <field name="partner_id"/>
-                        <!--<field name="reject_motive_id"/> -->       
-                        <field name="price"/>  
-                        <field name="review"/>  
-                        <field name="answer_ids"/>
-                        <field name="question_id"/> 
                     </group>
                 </form>
             </field>
@@ -44,7 +48,7 @@
                         <field name="equipment_id"/>
                         <field name="imei"/>
                         <field name="partner_id"/>
-                        <!-- <field name="reject_motive_id"/> -->
+                        <field name="reject_motive_id"/>
                         <field name="price"/> 
                 </tree>
             </field>
@@ -65,7 +69,9 @@
                         <filter name="imei" string="IMEI" context="{'group_by': 'imei'}"/>
                         <field name="equipment_id" string="Equipo"/>
                         <filter name="equipment_id" string="Equipo" context="{'group_by': 'equipment_id'}"/>
-                        <!--<filter name="reject_motive_id" string="Motivo de rechazo" domain="[('reject_motive_id.name', 'ilike', self)]"/>-->
+                        <field name="reject_motive_id" string="Motivo de rechazo"/>
+                        <filter name="reject_motive_id" string="Motivo de rechazo" domain="[('reject_motive_id.name', '=', 'value')]" context="{'group_by': 'reject_motive_id'}" />
+
 
                     <!-- Grupos de estado -->
                     <group expand="0" string="Agrupar por Estado">

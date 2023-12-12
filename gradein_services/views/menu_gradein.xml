@@ -7,18 +7,24 @@
         <record id="menu_gradein_config" model="ir.ui.menu">
             <field name="name">Grade In Services</field>
             <field name="sequence" eval="10"/>
-        </record>
-
-        <record id="menu_gradein_question" model="ir.ui.menu">
-            <field name="name">Configuration</field>
-            <field name="parent_id" ref="menu_gradein_config"/>
             <field name="action" ref="action_gradein_order"/>
         </record>
-
+        
+        <menuitem id="menu_gradein_question"
+            name="Configuracion"
+            parent="menu_gradein_config"
+            groups="group_services_manager" />
+        
         <menuitem
             id="GradeInQuestionAction"
             name="Grade In Question"
             action="action_gradein_question"
+            parent="menu_gradein_question"/>
+
+        <menuitem
+            id="GradeInAnswerAction"
+            name="Grade In Answer"
+            action="action_gradein_answer"
             parent="menu_gradein_question"/>
 
         <menuitem
@@ -34,9 +40,9 @@
             parent="menu_gradein_question"/>
 
         <menuitem
-            id="GradeInAnswerAction"
-            name="Grade In Answer"
-            action="action_gradein_answer"
+            id="GradeInRejectMotive"
+            name="Grade In Reject Motive"
+            action="action_gradein_reject_motive"
             parent="menu_gradein_question"/>
 
         <menuitem
