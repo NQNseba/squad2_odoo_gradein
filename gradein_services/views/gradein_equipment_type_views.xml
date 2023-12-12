@@ -1,20 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <data>
+         <!-- FORM -->
         <record id="view_gradein_equipment_type_form" model="ir.ui.view">
-        <field name="name">Grade In Equipment Type</field>
-        <field name="model">gradein.equipment.type</field>
-        <field name="arch" type="xml">
-            <form>
-                <group>
+            <field name="name">Grade In Equipment Type Form</field>
+            <field name="model">gradein.equipment.type</field>
+            <field name="arch" type="xml">
+                <form string="Equipment Type">
+                    <group>
+                        <field name="name"/>
+                        <field name="image"/>
+                        <field name="active"/>
+                        <field name="question_ids" widget="many2many_tags"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE -->
+        <record id="view_gradein_equipment_type_tree" model="ir.ui.view">
+            <field name="name">Grade In Equipment Type Tree</field>
+            <field name="model">gradein.equipment.type</field>
+            <field name="arch" type="xml">
+                <tree string="Equipment Type">
+                    <!-- Definimos las columnas que seran visibles -->
                     <field name="name"/>
-                    <field name="image"/>
-                    <field name="active"/>
-                    <!--<field name="question_ids" widget="many2many_tags"/>--> 
-                </group>
-            </form>
-        </field>
-    
+                </tree>
+            </field>
+        </record>   
 
+        <!-- SEARCH -->
+        <record id="view_gradein_equipment_type_search" model="ir.ui.view">
+            <field name="name">Grade In Equipment Type Search</field>
+            <field name="model">gradein.equipment.type</field>
+            <field name="arch" type="xml">
+                <search>
+                        <field name="name" string="Nombre"/>
+                        <filter name="name" string="Nombre" context="{'group_by': 'name'}"/>
 
-    </record>
+                        <field name="active" string="Archivados"/>
+                        <filter name="active" string="Archivados" domain="[('active', '=', True)]" context="{'group_by': 'active'}"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_gradein_equipment_type" model="ir.actions.act_window">
+            <field name="name">Grade In Equipment Type Action</field>
+            <field name="res_model">gradein.equipment.type</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="view_id" ref="view_gradein_equipment_type_tree"/>
+        </record>
+    </data>
 </odoo>
