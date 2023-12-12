@@ -45,8 +45,8 @@
             <field name="model">gradein.equipment</field>
             <field name="arch" type="xml">
                 <search>
-                        <field name="name" string="Nombre"/>
-                        <filter name="name" string="Nombre" context="{'group_by': 'name'}" />
+                        <field name="name" string="Name"/>
+                        <filter name="name" string="Name" context="{'group_by': 'name'}" />
                 </search>
             </field>
         </record>

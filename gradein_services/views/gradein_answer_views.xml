@@ -36,11 +36,11 @@
             <field name="model">gradein.answer</field>
             <field name="arch" type="xml">
                 <search>
-                        <field name="name" string="Nombre"/>
-                        <filter name="name" string="Nombre" context="{'group_by': 'name'}"/>
+                        <field name="name" string="Name"/>
+                        <filter name="name" string="Name" context="{'group_by': 'name'}"/>
 
-                        <field name="active" string="Archivados"/>
-                        <filter name="active" string="Archivados" domain="[('active', '=', True)]" context="{'group_by': 'active'}"/>
+                        <field name="active" string="Archive"/>
+                        <filter name="active" string="Archive" domain="[('active', '=', True)]" context="{'group_by': 'active'}"/>
                 </search>
             </field>
         </record>
