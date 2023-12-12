@@ -11,7 +11,7 @@
         </record>
         
         <menuitem id="menu_gradein_question"
-            name="Configuracion"
+            name="Configuration"
             parent="menu_gradein_config"
             groups="group_services_manager" />
         

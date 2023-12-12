@@ -3,7 +3,7 @@
         <t t-call="web.html_container">
             <t t-call="web.external_layout">
                 <div class="page">
-                    <h2>Grade In Order Report</h2>
+                    <h2>Order Report</h2>
                     <t t-foreach="docs" t-as="o">
                         <div>
                             <span t-field="o.name"/>
@@ -13,14 +13,13 @@
                         <table class="table table-sm o_main_table">
                             <thead style="display: table-row-group">
                                 <tr>
-                                    <th class="text-left">Nombre</th>
-                                    <th class="text-left">Fecha</th>
-                                    <th class="text-left">Equipo</th>
+                                    <th class="text-left">Name</th>
+                                    <th class="text-left">Date</th>
+                                    <th class="text-left">Equipment</th>
                                     <th class="text-left">Imei</th>
-                                    <th class="text-left">Imagenes</th>
-                                    <th class="text-left">Cliente</th>
-                                    <th class="text-left">Importe a pagar</th>
-                                    <th class="text-left">Resumen de la evaluación</th>
+                                    <th class="text-left">Client</th>
+                                    <th class="text-left">Amount to pay</th>
+                                    <th class="text-left">Evaluation Summary</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -29,18 +28,19 @@
                                     <td class="text-left"><t t-esc="o.date"/></td>
                                     <td class="text-left"><t t-esc="o.equipment_id.name"/></td>
                                     <td class="text-left"><t t-esc="o.imei"/></td>
-                                    <td class="text-left">
-                                    <t t-foreach="o.image_ids" t-as="img">
-                                    <span t-field="img.image_1920" t-options='{"widget":"image"}'/>
-                                    </t>
-                                    </td>
                                     <td class="text-left"><t t-esc="o.partner_id.name"/></td>
                                     <td class="text-left"><t t-esc="o.price"/></td>
                                     <td class="text-left"><t t-esc="o.review"/></td>
                                 </tr>
                             </tbody>
                         </table>
-
+                        <t t-foreach="o.image_ids" t-as="img">
+                        <div style="max-width: 100%; max-height: 200px; text-align:center;">
+                                <p>
+                                <span t-field="img.image_1920" t-options='{"widget":"image"}'/>
+                                </p>
+                        </div>
+                        </t>
                     </t>
                 </div>
             </t>
@@ -48,7 +48,7 @@
     </template>
     
     <record id="action_gradein_order_report" model="ir.actions.report">
-        <field name="name">Grade in Order</field>
+        <field name="name">Report</field>
         <field name="model">gradein.order</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">gradein_services.gradein_order_report</field>
