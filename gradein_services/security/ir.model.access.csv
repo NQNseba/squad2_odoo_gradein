@@ -11,6 +11,9 @@
 "access_gradein_answer_user","Grade_In_Answer_Type_User","model_gradein_answer","group_services_users",1,0,0,0
 "access_gradein_answer_admin","Grade_In_Answer_Type_Admin","model_gradein_answer","group_services_manager",1,1,1,1
 
+"access_gradein_image_user","Order_Image_User","model_gradein_order_image","group_services_users",1,0,0,0
+"access_gradein_image_admin","Order_Image_Admin","model_gradein_order_image","group_services_manager",1,1,1,1
+
 "access_gradein_order_user","Grade_In_Order_Type_User","model_gradein_order","group_services_users",1,0,0,0
 "access_gradein_order_admin","Grade_In_Order_Type_Admin","model_gradein_order","group_services_manager",1,1,1,1
 

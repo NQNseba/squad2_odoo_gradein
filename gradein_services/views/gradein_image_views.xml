@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+            <record id="view_gradein_equipment_form" model="ir.ui.view">
+            <field name="name">Grade In Order Image Form</field>
+            <field name="model">gradein.order.image</field>
+            <field name="arch" type="xml">
+                <form string="Grade in Order Image">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="image_1920"/>
+                        </group>
+                        
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE -->
+        <record id="view_gradein_equipment_tree" model="ir.ui.view">
+            <field name="name">Grade In Order Image Tree</field>
+            <field name="model">gradein.order.image</field>
+            <field name="arch" type="xml">
+                <tree string="Grade in Order Image">
+                    <!-- Definimos las columnas que serán visibles -->
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record> 
+    </data>
+    
+
+</odoo>
