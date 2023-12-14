@@ -201,8 +201,8 @@ msgstr "Accion Grade In Orden"
 #. module: gradein_services
 #: model:ir.model,name:gradein_services.model_report_gradein_services_gradein_order_report
 #: model_terms:ir.ui.view,arch_db:gradein_services.gradein_order_report
-msgid "Grade In Order Report"
-msgstr "Reporte Grade In Orden"
+msgid "Report"
+msgstr "Reporte"
 
 #. module: gradein_services
 #: model:ir.model,name:gradein_services.model_gradein_question
