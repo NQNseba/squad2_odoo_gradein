@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 class GradeInOrder(models.Model):
     _name = "gradein.order"
@@ -7,9 +7,9 @@ class GradeInOrder(models.Model):
     name = fields.Char(string="Name")
     date = fields.Date(string="Date")
     state = fields.Selection([
-        ('draft','draft'),
-        ('confirmed','confirmed'),
-        ('rejected','rejected'),], string='State', default='draft')
+        ('draft','Draft'),
+        ('confirmed','Confirmed'),
+        ('rejected','Rejected'),], string='State', default='draft')
     equipment_id = fields.Many2one('gradein.equipment', string='Equipment')
     imei = fields.Integer(string='IMEI')
     image_ids = fields.One2many('gradein.order.image', 'grade_order_id', string='Images')
@@ -19,4 +19,5 @@ class GradeInOrder(models.Model):
     review = fields.Text(string='Evaluation Summary')
     question_id = fields.Many2one('gradein.question', string='Question')
     answer_ids = fields.Many2one('gradein.answer', string='Answers')
+
 

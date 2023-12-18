@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="view_gradein_equipment_form" model="ir.ui.view">
-            <field name="name">Grade In Equipment Form</field>
+        <record id="view_gradein_equipment_form_prototype" model="ir.ui.view">
+            <field name="name">Grade In Equipment Form Prototype</field>
             <field name="model">gradein.equipment</field>
             <field name="arch" type="xml">
                 <form string="Equipment">
                     <group>
-                        <field name="name"/>
-                        <field name="image"/>
-                        <field name="description"/>
-                        <field name="active"/>
+                        <field name="name" widget="char" placeholder="Name of the Equipment"/>
+                        <field name="image" widget="image"/>
+                        <field name="description" widget="char" placeholder="Enter a brief description of the equipment"/>
+                        <field name="active" widget="boolean_toggle"/>
                         <field name="price"/>
                     </group>
                 </form>
@@ -18,7 +18,7 @@
         </record>
 
         <!-- TREE -->
-        <record id="view_gradein_equipment_tree" model="ir.ui.view">
+        <record id="view_gradein_equipment_tree_prototype" model="ir.ui.view">
             <field name="name">Grade In Equipment Tree</field>
             <field name="model">gradein.equipment</field>
             <field name="arch" type="xml">
@@ -35,8 +35,8 @@
         <record id="action_gradein_equipment" model="ir.actions.act_window">
             <field name="name">Grade In Equipment Action</field>
             <field name="res_model">gradein.equipment</field>
-            <field name="view_mode">tree,form</field>
-            <field name="view_id" ref="view_gradein_equipment_tree"/>
+            <field name="view_mode">tree,form,search</field>
+            <field name="view_id" ref="view_gradein_equipment_tree_prototype"/>
         </record>
 
         <!-- SEARCH -->

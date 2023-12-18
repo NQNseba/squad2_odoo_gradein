@@ -8,9 +8,9 @@
             <field name="arch" type="xml">
                 <form string="Equipment Type">
                     <group>
-                        <field name="name"/>
-                        <field name="image"/>
-                        <field name="active"/>
+                        <field name="name" widget="char" placeholder="Name of the Type of Equipment"/>
+                        <field name="image" widget="image"/>
+                        <field name="active" widget="boolean_toggle"/>
                         <field name="question_ids" widget="many2many_tags"/>
                     </group>
                 </form>
