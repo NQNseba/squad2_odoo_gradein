@@ -11,7 +11,7 @@ class GradeInOrder(models.Model):
         ('confirmed','Confirmed'),
         ('rejected','Rejected'),], string='State', default='draft')
     equipment_id = fields.Many2one('gradein.equipment', string='Equipment')
-    imei = fields.Integer(string='IMEI')
+    imei = fields.Char(string='IMEI')
     image_ids = fields.One2many('gradein.order.image', 'grade_order_id', string='Images')
     partner_id = fields.Many2one('res.partner', string='Client')
     reject_motive_id = fields.Many2one('gradein.reject.motive', string='Reject Motive')
