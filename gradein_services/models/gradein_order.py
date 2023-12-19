@@ -20,4 +20,10 @@ class GradeInOrder(models.Model):
     question_id = fields.Many2one('gradein.question', string='Question')
     answer_ids = fields.Many2one('gradein.answer', string='Answers')
 
+    @api.onchange('answer_ids')
+    def _onchange_answer_ids(self):
+        for order in self:
+            total_price_reduction = sum(answer.price_reduction for answer in order.answer_ids if answer.active)
+            # Asegúrate de no descontar si la cantidad de pago es 0
+            order.price = max(0, order.price - total_price_reduction)
 
