@@ -8,8 +8,8 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                        <field name="name"/>
-                        <field name="active"/>
+                        <field name="name" widget="char" placeholder="Enter a Question for the equipment"/>
+                        <field name="active" widget="boolean_toggle"/>
                         <field name="equipment_type_ids" widget="many2many_tags"/> 
                         <field name="answer_ids" widget="many2many_tags"/>              
                     </group>

@@ -8,29 +8,35 @@
             <field name="model">gradein.order</field>
             <field name="arch" type="xml">
                 <form>
-                    <group>
-                        <field name="name"/>
-                        <field name="date"/>
-                        <field name="state"/>
-                        <field name="equipment_id"/>
-                        <field name="imei"/>
-                    </group>
-                    <group>
-                        <field name="partner_id"/>
-                        <field name="reject_motive_id"/>   
-                        <field name="price"/>  
-                        <field name="review"/>  
-                        <field name="answer_ids"/>
-                        <field name="question_id"/>                         
-                    </group>
-                    <group>
-                        <field name="image_ids"
-                        class="o_website_sale_image_list"
-                        context="{'default_name' : name}"
-                        mode="kanban"
-                        add-label="Add a Image"
-                        no-label="1"/>
-                    </group>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" widget="char" placeholder="Enter the name of the order"/>
+                                <field name="date" placeholder="Enter the date of the order"/>
+                                <field name="state" widget="radio"/>
+                                <field name="equipment_id" placeholder="Select the Equipment of the Order"/>
+                                <field name="imei" placeholder="Enter the Imei of the Device"/>
+                            </group>
+                                                    
+                            <group>
+                                <field name="partner_id" placeholder="Select the Member who is making the Order"/>
+                                <field name="reject_motive_id" placeholder="Select one of the Rejection Motive if there is one"/>   
+                                <field name="price"/>  
+                                <field name="review" widget="char" placeholder="Make a quick review of the order"/>  
+                                <field name="question_id" placeholder="Select one of the Question about the Equipment"/>
+                                <field name="answer_ids" placeholder="Select one of the apropiate Answer to the Question"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <field name="image_ids"
+                            class="o_website_sale_image_list"
+                            context="{'default_name' : name}"
+                            mode="kanban"
+                            add-label="Add a Image"
+                            no-label="1"/>
+                        </group>
+                    </sheet>
                 </form>
             </field>
         </record>

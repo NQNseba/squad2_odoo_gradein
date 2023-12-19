@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <!-- FORM -->   
         <record id="view_gradein_reject_motive_form" model="ir.ui.view">
             <field name="name">Grade In Reject Motive Form</field>
             <field name="model">gradein.reject.motive</field>
             <field name="arch" type="xml">
                 <form string="Reject Motive">
                     <group>
-                        <field name="name"/>
-                        <field name="active"/>
+                        <field name="name" widget="char" placeholder="Enter a Reject Motive for the Equipments"/>
+                        <field name="active" widget="boolean_toggle"/>
                     </group>
                 </form>
             </field>
@@ -37,7 +38,7 @@
 
         <!-- SEARCH -->
         <record id="view_gradein_reject_motive_search" model="ir.ui.view">
-            <field name="name">Grade In Equipment Search</field>
+            <field name="name">Grade In Reject Motive Search</field>
             <field name="model">gradein.reject.motive</field>
             <field name="arch" type="xml">
                 <search>

@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import fields, models, api
 
 class GradeInAnswer(models.Model):
     _name = 'gradein.answer'

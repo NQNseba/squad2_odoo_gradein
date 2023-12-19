@@ -9,8 +9,8 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                        <field name="name"/>
-                        <field name="active"/>
+                        <field name="name" widget="char" placeholder="Enter an Answer for the Questions"/>
+                        <field name="active" widget="boolean_toggle"/>
                         <field name="price_reduction"/>                
                     </group>
                 </form>
